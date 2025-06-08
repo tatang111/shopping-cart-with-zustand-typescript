@@ -13,13 +13,14 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
-import { useCartStore } from "@/store/shopcart";
 import { CartSection } from "./CartSection";
+import { useCartStore } from "@/store/shopCart";
+import type { CartItem } from "@/store/shopCart";
 
 export const Navbar = () => {
   const { items } = useCartStore();
 
-  const total = items.reduce((acc, item) => {
+  const total = items.reduce((acc: number, item: CartItem) => {
     return acc + item.price * item.quantity;
   }, 0);
 

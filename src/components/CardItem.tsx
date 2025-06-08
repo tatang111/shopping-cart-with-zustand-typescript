@@ -1,4 +1,4 @@
-import { useCartStore } from "@/store/shopcart";
+import { useCartStore } from "@/store/shopCart";
 import { Button } from "./ui/button";
 import { Card, CardDescription, CardTitle } from "./ui/card";
 

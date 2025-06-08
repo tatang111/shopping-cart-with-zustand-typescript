@@ -1,6 +1,6 @@
 import { CardItem } from "@/components/CardItem";
 import { Navbar } from "@/components/Navbar";
-import { useCartStore } from "@/store/shopcart";
+import { useCartStore } from "@/store/shopCart";
 
 export const Shopcart = () => {
   const { items} = useCartStore();
