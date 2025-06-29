@@ -17,11 +17,16 @@ type CardItemProps = {
 export const CartSection = ({ item }: CardItemProps) => {
   const { removeItem } = useCartStore();
   return (
-    <section className="flex  ">
-      <img src={item.imageUrl} className="w-30" />
+    <section className="flex gap-3">
+      <img src={item.imageUrl} className="w-20" />
       <div className="flex justify-between w-full">
         <div className="flex flex-col  justify-center ">
-          <SheetTitle className="text-lg font-[600]">{item.name}</SheetTitle>
+          <SheetTitle className="text-lg font-[600]">
+            {item.name}{" "}
+            {item.quantity > 1 && (
+              <span className="text-sm text-gray-500">x {item.quantity}</span>
+            )}
+          </SheetTitle>
           <SheetDescription className="text-md text-">
             ${item.price}
           </SheetDescription>
